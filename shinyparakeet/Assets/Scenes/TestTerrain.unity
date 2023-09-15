@@ -209,7 +209,7 @@ Transform:
   m_GameObject: {fileID: 53686735}
   serializedVersion: 2
   m_LocalRotation: {x: 0.06286942, y: -0, z: -0, w: 0.9980218}
-  m_LocalPosition: {x: -0.11899996, y: 0.58, z: -4.02}
+  m_LocalPosition: {x: -0.11899996, y: 0.81, z: -3.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -226,8 +226,9 @@ GameObject:
   - component: {fileID: 82682914}
   - component: {fileID: 82682913}
   - component: {fileID: 82682912}
-  - component: {fileID: 82682917}
+  - component: {fileID: 82682920}
   - component: {fileID: 82682918}
+  - component: {fileID: 82682919}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -301,29 +302,6 @@ Transform:
   - {fileID: 53686738}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &82682917
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82682909}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &82682918
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -351,6 +329,43 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &82682919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82682909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 657e5ced4a9444301a09449d741ca9ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 5
+  sprintSpeed: 10
+  jumpForce: 5
+  cameraTransform: {fileID: 53686738}
+--- !u!65 &82682920
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82682909}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &289334149
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +379,7 @@ GameObject:
   - component: {fileID: 289334150}
   - component: {fileID: 289334153}
   m_Layer: 0
-  m_Name: Terrain
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
